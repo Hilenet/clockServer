@@ -7,3 +7,15 @@
   font-family: 'Open Sans Regular';
   font-size: 200px;
 }
+
+body {
+  position: relative;
+}
+
+#msg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: skyblue;
+  font-weight: bold;
+}
