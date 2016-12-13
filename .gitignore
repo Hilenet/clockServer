@@ -1,5 +1,6 @@
 Gemfile.lock
 wav/*
-log/*
 *.yml
 /tmp
+
+!.gitkeep
