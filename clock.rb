@@ -9,8 +9,8 @@ everyday = list['everyday'] || []
 
 # play wav in arg folder
 def wavCall name
-  file = Dir.glob(File.expand_path("wav/#{name}")+"/*.wav").sample
-  `/usr/bin/aplay -q #{file}`
+  file = Dir.glob(File.expand_path("wav/#{name}")+"/*.mp3").sample
+  `/usr/bin/mpg321 -q #{file}`
 end
 
 # set handler
@@ -22,9 +22,9 @@ everyday.each do |time|
 end
 
 # every in :00
-Clockwork::every(1.hours, "sometime", if: lambda{|_| (rand(100)-1).negative?}) do 
-  #wavCall 'sometime
-  puts ("");
+Clockwork::every(1.hours, "sometime", at: '**:00', if: lambda{|_| (rand(100)-1).negative?}) do 
+  # wavCall 'sometime'
+  puts ""
 end
 
 
