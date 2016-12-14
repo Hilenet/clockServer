@@ -8,6 +8,37 @@
 </head>
 <body>
   <div id="clock"></div>
+
+  <table id="weather">
+    <tbody>
+    <tr id="date">
+      <td></td>
+      <td>今日</td>
+      <td>明日</td>
+    </tr>
+
+    <tr id="weather">
+      <td>天気</td>
+      <td class="today weather"></td>
+      <td class="tomorrow weather"></td>
+    </tr>
+
+    <tr id="temperature">
+      <td>気温</td>
+      <td class="today temperature"></td>
+      <td class="tomorrow temperature"></td>
+    </tr>
+
+    <tr id="por">
+      <td>降水確率</td>
+      <td class="today por"></td>
+      <td class="tomorrow por"></td>
+    </tr>
+
+    </tbody>
+  </table>
+
   <script type="text/javascript" src="http://momentjs.com/downloads/moment.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
   <script type="text/javascript" src="assets/js/script.js"></script>
 </body>

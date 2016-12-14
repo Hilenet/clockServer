@@ -1,11 +1,17 @@
 #clock {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   -webkit-box-align: center;
   font-family: 'Open Sans Regular';
   font-size: 200px;
+}
+
+#weather {
+  width: 800px;
+  font-size: 60px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 body {
