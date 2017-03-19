@@ -53,4 +53,23 @@
     return str;
   }
 
+  function showWeather(date, weather, temperature, por) {
+    document.querySelector('.' + date +     '.weather').textContent += weather.toString();
+    document.querySelector('.' + date + '.temperature').innerHTML   += temperature.toString() + '&deg;C';
+    document.querySelector('.' + date +         '.por').textContent += por.toString() + '%';
+  }
+
+  // Get weather information
+  $.ajax({
+    type: 'get',
+    url: '/weather',
+  }).done(function(data) {
+    // var data = {"today": {"weather": "晴れ", "temperature": "19", "por": "12"}, "tomorrow": {"weather": "曇り", "temperature": "20", "por": "55"}};
+    Object.keys(data).forEach(function(key) {
+      showWeather(key, data[key]['weather'], data[key]['temperature'], data[key]['por']);
+    });
+  }).fail(function(data) {
+    console.log(data);
+  });
+
 })();
